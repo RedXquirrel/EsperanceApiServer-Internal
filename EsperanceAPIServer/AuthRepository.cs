@@ -26,7 +26,9 @@ namespace EsperanceAPIServer
         {
             IdentityUser user = new IdentityUser
             {
-                UserName = userModel.UserName
+                UserName = userModel.UserName,
+                PhoneNumber = userModel.PhoneNumber,
+                Email = userModel.Email
             };
 
             var result = await _userManager.CreateAsync(user, userModel.Password);
