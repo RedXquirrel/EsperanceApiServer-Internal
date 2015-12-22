@@ -20,9 +20,13 @@ namespace EsperanceAPIServer.Services
         // Use NuGet to install SendGrid (Basic C# client lib) 
         private async Task configSendGridasync(IdentityMessage message)
         {
+            
+
             var myMessage = new SendGridMessage();
             
             myMessage.AddTo(message.Destination);
+            // ToDo: Remove temp overide of previous line
+            myMessage.AddTo("anthony.harrison@xamtastic.com");
             myMessage.From = new System.Net.Mail.MailAddress("no-reply@xamtastic.com", string.Format("Please Confirm {0}", message.Destination));
             myMessage.Subject = message.Subject;
             myMessage.Text = message.Body;

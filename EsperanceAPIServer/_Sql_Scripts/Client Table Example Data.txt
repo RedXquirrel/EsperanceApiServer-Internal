@@ -1,0 +1,2 @@
+EsperanceAppMVC	AJVgnADaPnAj+wEfP50iNbplKDm0oU8JatlA9/MmIqc=	Esperance App MVC	0	True	7200	http://localhost:49223/
+EsperanceAppXamarin	5OdpMJUex7lrIi+MdapgLQRQRpebaoFrfQkWn0HvQ04=	Esperence App Xamarin	1	True	1440	*

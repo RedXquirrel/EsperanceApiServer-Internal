@@ -1,4 +1,5 @@
 ﻿using EsperanceAPIServer.Models;
+using EsperanceAPIServer.Services;
 using Microsoft.AspNet.Identity;
 using System;
 using System.Collections.Generic;
@@ -37,6 +38,11 @@ namespace EsperanceAPIServer.Controllers
             if (errorResult != null)
             {
                 return errorResult;
+            }
+            else
+            {
+                EmailService es = new EmailService();
+                await es.SendAsync(new IdentityMessage { Destination = userModel.Email.Trim(), Subject = string.Format("Please Confirm {0}", userModel.Email.Trim()), Body = "token body" });
             }
 
             return Ok();
